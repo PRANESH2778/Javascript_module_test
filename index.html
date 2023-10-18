@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dangrek' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sboard">
+            <div class="title">
+                <p>ROCK<br>PAPER<br>SCISSORS</p>
+            </div>
+            <div class="cscore">
+                <p>COMPUTER SCORE</p>
+                <h1 id="pcscore">0</h1>
+            </div>
+            <div class="pscore">
+                <p>YOUR <br>SCORE</p>
+                <h1 id="plscore">0</h1>
+            </div>    
+        </div>
+        <div class="mainsection">
+            <div class="gameicons">
+                <div class="rock">
+                    <img src="Rock.png" onclick="playerpick('rock')">
+                </div>
+                <div class="scissor">
+                    <img src="Scissor.png" onclick="playerpick('scissor')">
+                </div>
+                <div class="paper">
+                    <img src="Paper.png" onclick="playerpick('paper')">
+                </div>
+            </div>
+            <div class="result"> 
+                <div class="pselect">
+                    <p>YOU PICKED</p>                        
+                        <div class="pselect-image">
+                            <img src="Rock.png" id="p-img">
+                        </div>
+                </div>
+                <div class="winner">
+                    <div class="compare"><p id="decision">YOU WIN</p>
+                    </div>
+                    <button class="playagain" onclick="playagain()">PLAY AGAIN</button>
+                </div>
+                <div class="cselect">
+                    <p>PC PICKED</p>
+                    <div class="cselect-image">
+                        <img src="Rock.png" id="c-img">
+                    </div>
+                </div>
+            </div>
+            <div class="winnerpage">
+                    <img src="hurray.png">
+                    <p class="hurray">HURRAY!!</p>
+                    <p class="won">YOU WON THE GAME</p>
+                    <button class="playagain" onclick="playagain()" style="margin-left: 200px; margin-top: 30px;">PLAY AGAIN</button>
+            </div>
+            <div class="rulessection">
+                <button class="exitbtn" onclick="showrules()">X</button>
+            <div class="rules">
+                <p>Game Rules</p>
+                <ul box>
+                    <li><span>Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
+                    <li><span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span></li>
+                    <li><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</span></li>
+                    <li><span>If both players lay down the same hand, each player lays down another hand</span></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <button class="next-btn" onclick="nextshow()">NEXT</button>
+        <button class="rulesbtn" onclick="showrules()">RULES</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
